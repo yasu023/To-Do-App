@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <title>To Do App</title>
+  </head>
+  <body>
+    <button id="lang-toggle" class="lang-toggle">EN</button>
+
+    <div class="container-title">
+      <h1 data-en="To Do List" data-ar="قائمة المهام">To Do List</h1>
+    </div>
+
+    <!-- Login Form -->
+    <div class="auth-container" id="login-form">
+      <h2 data-en="Login" data-ar="تسجيل الدخول">Login</h2>
+      <input type="email" id="login-email" placeholder="Email" required />
+      <input
+        type="password"
+        id="login-password"
+        placeholder="Password"
+        required
+      />
+      <button id="login-submit" data-en="Login" data-ar="دخول">Login</button>
+      <p data-en="Don't have an account?" data-ar="ليس لديك حساب؟">
+        Don't have an account?
+      </p>
+      <a href="#" id="go-to-signup" data-en="Sign up" data-ar="انشاء حساب"
+        >Sign up</a
+      >
+    </div>
+
+    <!-- Signup Form -->
+    <div class="auth-container" id="signup-form" style="display: none">
+      <h2 data-en="Sign Up" data-ar="إنشاء حساب">Sign Up</h2>
+      <input type="text" id="signup-name" placeholder="Full Name" required />
+      <input type="email" id="signup-email" placeholder="Email" required />
+      <input
+        type="password"
+        id="signup-password"
+        placeholder="Password"
+        required
+      />
+      <button id="signup-submit" data-en="Sign Up" data-ar="إنشاء حساب">
+        Sign Up
+      </button>
+      <p data-en="Already have an account?" data-ar="هل لديك حساب؟">
+        Already have an account?
+        <a href="#" id="go-to-login" data-en="Login" data-ar="تسجيل الدخول"
+          >Login</a
+        >
+      </p>
+    </div>
+
+    <!-- Todo List Section -->
+    <div class="container" id="task-container" style="display: none">
+      <div class="logout-container">
+        <button
+          id="log-out"
+          style="
+            background-color: red;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+          "
+          data-en="Log Out"
+          data-ar="تسجيل الخروج"
+        >
+          Log Out
+        </button>
+      </div>
+      <div class="inputcol">
+        <textarea name="text" class="textarea"></textarea>
+        <button
+          type="button"
+          class="buttoninput"
+          data-en="Add Task"
+          data-ar="إضافة مهمة"
+        >
+          <i class="fa-solid fa-check"></i>
+        </button>
+      </div>
+      <div class="todolist"></div>
+    </div>
+  </body>
+</html>
